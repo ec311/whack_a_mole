@@ -28,7 +28,7 @@ module mole_state(Clock_1HZ, mole_number, buttons, led, win_or_not
     output reg [7:0]led;
     output reg win_or_not;
     
-    always@(posedge Clock_1HZ) begin
+    always@(*) begin
         // Inside the 1 second period
         if (Clock_1HZ) begin
             led[mole_number] = 1;

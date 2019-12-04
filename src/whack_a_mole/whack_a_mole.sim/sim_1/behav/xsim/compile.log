@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/mole_state.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mole_state
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sim_1/new/mole_state_testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mole_state_testbench
