@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 12/04/2019 01:16:14 PM
+// Create Date: 12/04/2019 04:21:54 PM
 // Design Name: 
-// Module Name: startup
+// Module Name: count2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,24 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module startup(
+module count2(
     input clk,
-    input enable,
     input reset,
-    output [15:0] display
+    output reg [1:0] outCount
     );
     
-    reg [3:0] count;
-    // test - delete
-    always @(posedge clk, negedge reset) begin
-        if (reset == 0) begin
-            count <= 4'b0000;
-        end else begin
-            count <= count - 1;
-        end
+    always @(posedge clk, posedge reset) begin
+        if (reset)
+            outCount <= 2'b00;
+        else if (outCount == 2'b11)
+            outCount <=  2'b00;
+        else 
+            outCount <= outCount + 1;
     end
-    
-    assign display = {12'b000000000000, count};
-    //pass counter output to displaySegments
-
+            
 endmodule
+

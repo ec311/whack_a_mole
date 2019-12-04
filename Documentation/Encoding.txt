@@ -12,3 +12,6 @@ Format:
 [1001] = 9
 [1010] = p
 [1011] = t
+[1100] = moleLeft
+[1101] = moleCenter
+[1110] = moleRight
