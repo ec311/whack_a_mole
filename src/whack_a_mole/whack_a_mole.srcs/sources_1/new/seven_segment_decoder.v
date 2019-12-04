@@ -19,7 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+// Input - a single character encoded in 4 bits to be converted to seven segments
+// Output - seven segments encoded that shows the character
 module seven_segment_decoder(
     input [3:0] character,
     input reset,
