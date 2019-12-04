@@ -22,6 +22,7 @@
 
 module startup(
     input clk,
+    input enable,
     input reset,
     output reg [6:0] displaySegments
     );

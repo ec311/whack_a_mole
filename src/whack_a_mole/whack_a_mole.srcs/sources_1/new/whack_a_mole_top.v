@@ -25,19 +25,19 @@ module whack_a_mole_top(
         input reset,
         output reg [6:0] displaySegments
     );
-    
-    reg character;
-    startup s0(.clk(clk), .reset(reset), .displaySegments(displaySegments));
+    reg [3:0] enable;
+    // Enable bus that chooses which module should be working, basicically state
+    startup s0(.clk(clk), .enable(enable[0]), .reset(reset), .displaySegments(displaySegments));
 //    seven_segment_decoder s_7_d(.clk(clk), .reset(reset), .character(character), .displaySegments(displaySegments));
     // inititial countdown module
     //      7 segment display - BEN
     //          input - a bus containing what to display, output - none
         //      5 second counter (should be the same as 30 second) - BRIANA
-    //          input - 5 and down count instruction, output - 1 for done
+    //          input - 5 and down count instruction, output - character encoded in 4 bits for count
     
     // game module
     //      30 second counter (should be the same as 5 second) - BRIANA
-    //          input - 30 and up count instruction, output - 1 for done
+    //          input - 30 and up count instruction, output - character encoded in 4 bits for count
     //      score tracker module - MICHELLE
     //          input - score as a bus, output - none
     //          7 segment display (same as before)
