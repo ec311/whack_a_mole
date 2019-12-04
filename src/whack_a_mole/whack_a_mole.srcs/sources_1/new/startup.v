@@ -23,12 +23,10 @@
 module startup(
     input clk,
     input enable,
-    input reset,
-    output reg [6:0] displaySegments
+    input reset
     );
     
-    //pass counter ouput to s_7_d
+    //pass counter ouput to displaySegments
     
-    seven_segment_decoder s_7_d(.clk(clk), .reset(reset), .character(character), .displaySegments(displaySegments));
 
 endmodule

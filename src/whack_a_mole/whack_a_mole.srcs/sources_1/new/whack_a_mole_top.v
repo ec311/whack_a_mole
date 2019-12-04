@@ -23,11 +23,18 @@
 module whack_a_mole_top(
         input clk,
         input reset,
+        output reg [7:0] ANLine,
         output reg [6:0] displaySegments
     );
-    reg [3:0] enable;
     // Enable bus that chooses which module should be working, basicically state
-    startup s0(.clk(clk), .enable(enable[0]), .reset(reset), .displaySegments(displaySegments));
+    reg [3:0] enable;
+    reg [3:0] character;
+    reg [16:0] display;
+    startup s0(.clk(clk), .enable(enable[0]), .reset(reset), .display(display));
+    
+
+    seven_segment_decoder s_7_d(.clk(clk), .reset(reset), .character(character), .displaySegments(displaySegments));
+    display_control d_c(.clk(clk), .reset(reset), .display(display), .ANLine(ANLine), .character(character));
 //    seven_segment_decoder s_7_d(.clk(clk), .reset(reset), .character(character), .displaySegments(displaySegments));
     // inititial countdown module
     //      7 segment display - BEN
