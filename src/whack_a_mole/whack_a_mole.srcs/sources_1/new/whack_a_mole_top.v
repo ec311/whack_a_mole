@@ -26,12 +26,12 @@ module whack_a_mole_top(
         output [7:0] ANLine,
         output [6:0] displaySegments
     );
-    // Enable bus that chooses which module should be working, basicically state
     wire outClk_kHz;
     wire outClk_Hz;
+    // Enable bus that chooses which module should be working, basicically state
     wire [3:0] enable;
     wire [3:0] character;
-    wire [15:0] display;
+    wire [31:0] display;
     
     clock_divider100MHzTo1kHz c_dMTokHz(.clk(clk), .reset(reset), .outClk(outClk_kHz));
     clock_divider100MHzTo1Hz c_dMToHz(.clk(clk), .reset(reset), .outClk(outClk_Hz));
@@ -40,8 +40,8 @@ module whack_a_mole_top(
     
     display_control d_c(.clk(outClk_kHz), .reset(reset), .display(display), .ANLine(ANLine), .character(character));
     seven_segment_decoder s_7_d(.clk(clk), .reset(reset), .character(character), .displaySegments(displaySegments));
-    // inititial countdown module
-    //      7 segment display - BEN
+    // inititial countdown module - BEN DONE
+    //      7 segment display - BEN DONE
     //          input - a bus containing what to display, output - none
         //      5 second counter (should be the same as 30 second) - BRIANA
     //          input - 5 and down count instruction, output - character encoded in 4 bits for count

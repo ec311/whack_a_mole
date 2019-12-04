@@ -23,13 +23,13 @@
 module count2(
     input clk,
     input reset,
-    output reg [1:0] outCount
+    output reg [2:0] outCount
     );
     
     always @(posedge clk, posedge reset) begin
         if (reset)
-            outCount <= 2'b00;
-        else if (outCount == 2'b11)
+            outCount <= 3'b000;
+        else if (outCount == 3'b111)
             outCount <=  2'b00;
         else 
             outCount <= outCount + 1;

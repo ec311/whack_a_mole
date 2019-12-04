@@ -24,25 +24,27 @@ module startup(
     input clk,
     input enable,
     input reset,
-    output [15:0] display
+    output [31:0] display
     );
     
     reg [3:0] count;
     reg [27:0] delay;
     // test - delete
     always @(posedge clk) begin
-        if (reset) begin
-            count <= 4'b1000;
-            delay <= 0;
-        end else begin
-            delay <= delay + 1;
-            if (delay == 28'b1111111111111110000110101010) begin
-                count <= count - 1;
+        if (enable) begin
+            if (reset) begin
+                count <= 4'b1000;
+                delay <= 0;
+            end else begin
+                delay <= delay + 1;
+                if (delay == 28'b1111111111111110000110101010) begin
+                    count <= count - 1;
+                end
             end
         end
     end
     
-    assign display = {12'b000000000000, count};
+    assign display = {16'b0000110011000000, 12'b000000000000, count};
     //pass counter output to display
 
 endmodule

@@ -49,9 +49,9 @@ module seven_segment_decoder(
                 4'b1010 : displaySegments <= 7'b0011000; // P
                 4'b1011 : displaySegments <= 7'b1110000; // t
                 
-                4'b1100 : displaySegments <= 7'b1111011; // moleLeft
-                4'b1101 : displaySegments <= 7'b1110111; // moleCenter
-                4'b1110 : displaySegments <= 7'b1101111; // moleRight
+                4'b1100 : displaySegments <= 7'b1100010; // mole
+                4'b1101 : displaySegments <= 7'b1111111; // 
+                4'b1110 : displaySegments <= 7'b1111111; // 
                 4'b1111 : displaySegments <= 7'b1111111;
                 default : displaySegments <= 7'b1111111;
                 

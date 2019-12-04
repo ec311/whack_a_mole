@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Dec  4 17:16:36 2019
+| Date             : Wed Dec  4 17:44:38 2019
 | Host             : ECE-PHO115-10 running 64-bit major release  (build 9200)
 | Command          : report_power -file whack_a_mole_top_power_routed.rpt -pb whack_a_mole_top_power_summary_routed.pb -rpx whack_a_mole_top_power_routed.rpx
 | Design           : whack_a_mole_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.707        |
+| Total On-Chip Power (W)  | 0.783        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.621        |
+| Dynamic (W)              | 0.697        |
 | Device Static (W)        | 0.086        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 81.8         |
-| Junction Temperature (C) | 28.2         |
+| Max Ambient (C)          | 81.4         |
+| Junction Temperature (C) | 28.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.327 |      137 |       --- |             --- |
-|   LUT as Logic |     0.272 |       41 |     63400 |            0.06 |
+| Slice Logic    |     0.392 |      147 |       --- |             --- |
+|   LUT as Logic |     0.337 |       44 |     63400 |            0.07 |
 |   CARRY4       |     0.026 |       11 |     15850 |            0.07 |
-|   Register     |     0.023 |       67 |    126800 |            0.05 |
+|   Register     |     0.023 |       72 |    126800 |            0.06 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |     0.291 |      107 |       --- |             --- |
+| Signals        |     0.300 |      113 |       --- |             --- |
 | I/O            |     0.004 |       17 |       210 |            8.10 |
 | Static Power   |     0.086 |          |           |                 |
-| Total          |     0.707 |          |           |                 |
+| Total          |     0.783 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.638 |       0.621 |      0.017 |
+| Vccint    |       1.000 |     0.713 |       0.697 |      0.017 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,11 +138,11 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| whack_a_mole_top |     0.621 |
-|   c_dMTokHz      |     0.328 |
-|   d_c            |     0.145 |
-|     c1           |     0.145 |
-|   s0             |     0.130 |
+| whack_a_mole_top |     0.697 |
+|   c_dMTokHz      |     0.354 |
+|   d_c            |     0.211 |
+|     c1           |     0.211 |
+|   s0             |     0.113 |
 +------------------+-----------+
 
 

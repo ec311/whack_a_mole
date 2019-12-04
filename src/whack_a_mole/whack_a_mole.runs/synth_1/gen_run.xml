@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1575497695">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1575499379">
   <File Type="PA-TCL" Name="whack_a_mole_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="whack_a_mole_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="whack_a_mole_top_reports.tcl"/>
