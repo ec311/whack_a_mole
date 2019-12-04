@@ -27,14 +27,19 @@ module whack_a_mole_top(
         output [6:0] displaySegments
     );
     // Enable bus that chooses which module should be working, basicically state
+    wire outClk_kHz;
+    wire outClk_Hz;
     wire [3:0] enable;
     wire [3:0] character;
-    wire [16:0] display;
+    wire [15:0] display;
+    
+    clock_divider100MHzTo1kHz c_dMTokHz(.clk(clk), .reset(reset), .outClk(outClk_kHz));
+    clock_divider100MHzTo1Hz c_dMToHz(.clk(clk), .reset(reset), .outClk(outClk_Hz));
     
     startup s0(.clk(clk), .enable(1), .reset(reset), .display(display));
     
+    display_control d_c(.clk(outClk_kHz), .reset(reset), .display(display), .ANLine(ANLine), .character(character));
     seven_segment_decoder s_7_d(.clk(clk), .reset(reset), .character(character), .displaySegments(displaySegments));
-    display_control d_c(.clk(clk), .reset(reset), .display(display), .ANLine(ANLine), .character(character));
     // inititial countdown module
     //      7 segment display - BEN
     //          input - a bus containing what to display, output - none

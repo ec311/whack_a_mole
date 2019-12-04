@@ -28,9 +28,9 @@ module seven_segment_decoder(
     output reg [6:0] displaySegments
     );
     
-    always @(posedge reset, posedge clk) begin
+    always @(posedge clk, posedge reset) begin
         if (reset)
-            displaySegments <= 7'b1111111;
+            displaySegments <= 7'b0000000;
         else begin
             case(character)
             

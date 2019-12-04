@@ -28,16 +28,21 @@ module startup(
     );
     
     reg [3:0] count;
+    reg [27:0] delay;
     // test - delete
-    always @(posedge clk, negedge reset) begin
-        if (reset == 0) begin
-            count <= 4'b0000;
+    always @(posedge clk) begin
+        if (reset) begin
+            count <= 4'b1000;
+            delay <= 0;
         end else begin
-            count <= count - 1;
+            delay <= delay + 1;
+            if (delay == 28'b1111111111111110000110101010) begin
+                count <= count - 1;
+            end
         end
     end
     
     assign display = {12'b000000000000, count};
-    //pass counter output to displaySegments
+    //pass counter output to display
 
 endmodule
