@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="C:/Users/liben/Downloads/EC311_Project/whack_a_mole/src/whack_a_mole/whack_a_mole.xpr">
+<Project Version="7" Minor="40" Path="X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="1290982599624f309af360ba7277d285"/>
@@ -57,6 +57,14 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/new/whack_a_mole_top.v">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/mole_state.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
