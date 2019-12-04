@@ -22,9 +22,11 @@
 
 module whack_a_mole_top(
         input clk,
-        input reset
+        input reset,
+        output displaySegments
     );
     
+    seven_segment_decoder s_7_d(clk, reset, character, displaySegments);
     // inititial countdown module
     //      7 segment display - BEN
     //          input - a bus containing what to display, output - none

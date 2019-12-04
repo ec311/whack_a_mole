@@ -21,7 +21,7 @@
 
 
 module seven_segment_decoder(
-    input [3:0] hexDigit,
+    input [3:0] character,
     input reset,
     input clk,
     output reg [6:0] displaySegments
@@ -31,7 +31,7 @@ module seven_segment_decoder(
         if (reset)
             displaySegments <= 7'b1111111;
         else begin
-            case(hexDigit)
+            case(character)
             
                 4'b0000 : displaySegments <= 7'b0000001; // 0
                 4'b0001 : displaySegments <= 7'b1001111; // 1
