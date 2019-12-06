@@ -43,6 +43,9 @@ module whack_a_mole_top(
     wire done_1;
     wire win_or_not;
     
+    // CURRENTLY THERE ARE TWO STATES THAT BOTH COUNTDOWN, ONE FROM 5, ONE FROM 30. MAKE SURE THEY WORK
+    // AS INTENDED FIRST     !!ON THE FPGA!!      BEFORE IMPLEMENTING ANYTHING ELSE
+    
     // top level clock dividers, pass to each module that uses it
     clock_divider100MHzTo1kHz c_dMTokHz(.clk(clk), .reset(reset), .outClk(outClk_kHz));
     clock_divider100MHzTo1Hz c_dMToHz(.clk(clk), .reset(reset), .outClk(outClk_Hz));

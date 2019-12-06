@@ -23,8 +23,8 @@
 module startup(
     input clk,
     input clk_1Hz,
-    input reset,
     input enable,
+    input reset,
     output reg [31:0] display,
     output reg done_or_not
     );
@@ -32,7 +32,7 @@ module startup(
     wire [3:0] count;
     wire [3:0] countdownTimer = 4'b0101;
     
-    down_counter countdown_five(.clk(clk_1Hz), .reset(reset), .value(countdownTimer), .counterOut(count));
+    down_counter countdown_five(.clk(clk_1Hz), .enable(enable), .reset(reset), .value(countdownTimer), .counterOut(count));
     
     // pass counter output to display
     always@(posedge clk, posedge reset) begin
@@ -42,9 +42,9 @@ module startup(
                 done_or_not = 0;
             end else begin
                 if (count == 0) begin
-                    done_or_not <= 1'b1;
+                    done_or_not <= 1;
                 end else begin
-                    done_or_not <= 1'b0;
+                    done_or_not <= 0;
                 end
                 display = {16'b0000110011000000, 12'b000000000000, count};
             end
