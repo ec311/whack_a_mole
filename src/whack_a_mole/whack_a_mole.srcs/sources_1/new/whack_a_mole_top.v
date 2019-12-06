@@ -28,7 +28,6 @@ module whack_a_mole_top(
     );
     wire outClk_kHz;
     wire outClk_Hz;
-    // Enable bus that chooses which module should be working, basicically state
     reg [3:0] state;
     reg [3:0] nextState;
     wire [3:0] character;
@@ -45,6 +44,7 @@ module whack_a_mole_top(
     
     // CURRENTLY THERE ARE TWO STATES THAT BOTH COUNTDOWN, ONE FROM 5, ONE FROM 30. MAKE SURE THEY WORK
     // AS INTENDED FIRST     !!ON THE FPGA!!      BEFORE IMPLEMENTING ANYTHING ELSE
+    // may be due to passing done to startup s1 reset.
     
     // top level clock dividers, pass to each module that uses it
     clock_divider100MHzTo1kHz c_dMTokHz(.clk(clk), .reset(reset), .outClk(outClk_kHz));

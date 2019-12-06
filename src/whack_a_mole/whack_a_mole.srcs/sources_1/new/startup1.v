@@ -28,9 +28,10 @@ module startup1(
     output reg done_or_not
     );
     
-    wire [3:0] count_ones;
-    wire [3:0] countdownTimer = 4'b1001;
     reg [3:0] count_tens = 4'b0010;
+    reg [3:0] count_ones;
+    wire [3:0] countdownTimer = 4'b1001;
+    
     
     down_counter countdown_five(.clk(clk_1Hz), .reset(reset), .value(countdownTimer), .counterOut(count_ones));
     
@@ -39,12 +40,12 @@ module startup1(
     always@(count_ones) begin
         if (count_tens == 2 || count_tens == 1) begin
             if (count_ones == 0) begin
-                count_tens = count_tens - 1'b1;
+                count_tens <= count_tens - 1'b1;
             end
             done_or_not <= 1'b0;
         end else begin
             if (count_ones == 0) begin
-                count_tens = 1'b0;
+//                count_tens <= 1'b0; // probably not needed because when count_tens is 0 it will never go back
                 done_or_not <= 1'b1;
             end else begin
                 done_or_not <= 1'b0;
