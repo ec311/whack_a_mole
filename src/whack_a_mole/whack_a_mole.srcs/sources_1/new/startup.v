@@ -22,29 +22,33 @@
 
 module startup(
     input clk,
-    input enable,
+    input clk_1Hz,
     input reset,
-    output [31:0] display
+    input enable,
+    output reg [31:0] display,
+    output reg done_or_not
     );
     
-    reg [3:0] count;
-    reg [27:0] delay;
-    // test - delete
-    always @(posedge clk) begin
+    wire [3:0] count;
+    wire [3:0] countdownTimer = 4'b0101;
+    
+    down_counter countdown_five(.clk(clk_1Hz), .reset(reset), .value(countdownTimer), .counterOut(count));
+    
+    // pass counter output to display
+    always@(posedge clk, posedge reset) begin
         if (enable) begin
             if (reset) begin
-                count <= 4'b1000;
-                delay <= 0;
+                display = 0;
+                done_or_not = 0;
             end else begin
-                delay <= delay + 1;
-                if (delay == 28'b1111111111111110000110101010) begin
-                    count <= count - 1;
+                if (count == 0) begin
+                    done_or_not <= 1'b1;
+                end else begin
+                    done_or_not <= 1'b0;
                 end
+                display = {16'b0000110011000000, 12'b000000000000, count};
             end
         end
-    end
-    
-    assign display = {16'b0000110011000000, 12'b000000000000, count};
-    //pass counter output to display
 
+    end
 endmodule

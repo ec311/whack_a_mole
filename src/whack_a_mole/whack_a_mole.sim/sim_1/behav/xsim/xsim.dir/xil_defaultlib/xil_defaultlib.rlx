@@ -2,6 +2,19 @@
 2019.1
 May 24 2019
 15:06:07
-X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim/glbl.v,1575500328,verilog,,,,glbl,,,,,,,,
+,,,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sim_1/new/mole_state_testbench.v,,lfsr_tb,,,,,,,,
 X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sim_1/new/mole_state_testbench.v,1575494379,verilog,,,,mole_state_testbench,,,,,,,,
-X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/mole_state.v,1575494539,verilog,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sim_1/new/mole_state_testbench.v,,mole_state,,,,,,,,
+X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR.v,1575500328,verilog,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR4.v,,LFSR,,,,,,,,
+X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR4.v,1575500328,verilog,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v,,LFSR4,,,,,,,,
+X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v,1575500328,verilog,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider_Hz.v,,clock_divider100MHzTo1Hz;clock_divider100MHzTo1kHz,,,,,,,,
+X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider_Hz.v,1575579875,verilog,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/count2.v,,clock_divider_Hz,,,,,,,,
+X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/count2.v,1575500328,verilog,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/display_control.v,,count2,,,,,,,,
+X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/display_control.v,1575500328,verilog,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/down_counter.v,,display_control,,,,,,,,
+X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/down_counter.v,1575580049,verilog,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/mole_state.v,,down_counter,,,,,,,,
+X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/mole_state.v,1575500328,verilog,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/score_cnt.v,,mole_state,,,,,,,,
+,,,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/seven_segment_decoder.v,,score_cnt,,,,,,,,
+,,,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup.v,,seven_segment_decoder,,,,,,,,
+,,,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v,,startup,,,,,,,,
+,,,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sim_1/new/lfsr_tb.v,,startup1,,,,,,,,
+,,,,X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup1.v,,whack_a_mole_top,,,,,,,,

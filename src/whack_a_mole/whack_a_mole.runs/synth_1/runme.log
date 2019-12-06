@@ -15,28 +15,36 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14708 
+INFO: Helper process launched with PID 9084 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 810.211 ; gain = 177.289
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 810.309 ; gain = 177.797
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'whack_a_mole_top' [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clock_divider100MHzTo1kHz' [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v:44]
-INFO: [Synth 8-6155] done synthesizing module 'clock_divider100MHzTo1kHz' (1#1) [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v:44]
-INFO: [Synth 8-6157] synthesizing module 'clock_divider100MHzTo1Hz' [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'clock_divider100MHzTo1Hz' (2#1) [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v:23]
-INFO: [Synth 8-6157] synthesizing module 'startup' [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'startup' (3#1) [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup.v:23]
-INFO: [Synth 8-6157] synthesizing module 'display_control' [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/display_control.v:23]
-INFO: [Synth 8-6157] synthesizing module 'count2' [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/count2.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'count2' (4#1) [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/count2.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'display_control' (5#1) [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/display_control.v:23]
-INFO: [Synth 8-6157] synthesizing module 'seven_segment_decoder' [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/seven_segment_decoder.v:24]
-INFO: [Synth 8-226] default block is never used [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/seven_segment_decoder.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'seven_segment_decoder' (6#1) [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/seven_segment_decoder.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'whack_a_mole_top' (7#1) [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:23]
-WARNING: [Synth 8-3331] design startup has unconnected port enable
+INFO: [Synth 8-6157] synthesizing module 'whack_a_mole_top' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider100MHzTo1kHz' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider100MHzTo1kHz' (1#1) [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v:44]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider100MHzTo1Hz' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider100MHzTo1Hz' (2#1) [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'startup' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup.v:23]
+INFO: [Synth 8-6157] synthesizing module 'down_counter' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/down_counter.v:23]
+WARNING: [Synth 8-5788] Register counterOut_reg in module down_counter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/down_counter.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'down_counter' (3#1) [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/down_counter.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'counterOut' does not match port width (5) of module 'down_counter' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'startup' (4#1) [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup.v:23]
+INFO: [Synth 8-6157] synthesizing module 'startup1' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup1.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'counterOut' does not match port width (5) of module 'down_counter' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup1.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'startup1' (5#1) [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'display_control' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/display_control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count2' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/count2.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count2' (6#1) [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/count2.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'display_control' (7#1) [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/display_control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment_decoder' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/seven_segment_decoder.v:24]
+INFO: [Synth 8-226] default block is never used [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/seven_segment_decoder.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment_decoder' (8#1) [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/seven_segment_decoder.v:24]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'whack_a_mole_top' (9#1) [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:23]
+WARNING: [Synth 8-3331] design startup1 has unconnected port clk
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 874.355 ; gain = 241.434
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 873.426 ; gain = 240.914
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -49,44 +57,56 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 874.355 ; gain = 241.434
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 873.426 ; gain = 240.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 874.355 ; gain = 241.434
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 873.426 ; gain = 240.914
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]
-Finished Parsing XDC File [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/whack_a_mole_top_propImpl.xdc].
+Parsing XDC File [X:/Desktop/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [X:/Desktop/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/Desktop/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/whack_a_mole_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/whack_a_mole_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 988.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 990.855 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 988.250 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 990.855 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 988.250 ; gain = 355.328
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 990.855 ; gain = 358.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 988.250 ; gain = 355.328
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 990.855 ; gain = 358.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 988.250 ; gain = 355.328
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 990.855 ; gain = 358.344
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'whack_a_mole_top'
+WARNING: [Synth 8-327] inferring latch for variable 'count_tens_reg' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup1.v:37]
+WARNING: [Synth 8-327] inferring latch for variable 'display_reg' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:58]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                                0 |                             0000
+                  iSTATE |                                1 |                             0001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'whack_a_mole_top'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextState_reg' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:81]
+WARNING: [Synth 8-327] inferring latch for variable 'enable_reg' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:83]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 988.250 ; gain = 355.328
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 990.855 ; gain = 358.344
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -101,21 +121,29 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     26 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 1     
 	               26 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
 	   2 Input     26 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 1     
 	   9 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -123,6 +151,12 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module whack_a_mole_top 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 Module clock_divider100MHzTo1kHz 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -141,12 +175,29 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     26 Bit        Muxes := 1     
+Module down_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 3     
 Module startup 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module startup1 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      4 Bit       Adders := 1     
-+---Registers : 
-	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module count2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -182,8 +233,75 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 's0/display_reg[28]' (FDE) to 's0/display_reg[4]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[24]' (FDE) to 's0/display_reg[4]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[20]' (FDE) to 's0/display_reg[4]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[16]' (FDE) to 's0/display_reg[4]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[12]' (FDE) to 's0/display_reg[4]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[8]' (FDE) to 's0/display_reg[4]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[4]' (FDE) to 's0/display_reg[5]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[29]' (FDE) to 's0/display_reg[5]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[25]' (FDE) to 's0/display_reg[5]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[21]' (FDE) to 's0/display_reg[5]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[17]' (FDE) to 's0/display_reg[5]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[13]' (FDE) to 's0/display_reg[5]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[9]' (FDE) to 's0/display_reg[5]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[5]' (FDE) to 's0/display_reg[6]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[30]' (FDE) to 's0/display_reg[6]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[26]' (FDE) to 's0/display_reg[22]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[22]' (FDE) to 's0/display_reg[23]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[18]' (FDE) to 's0/display_reg[6]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[14]' (FDE) to 's0/display_reg[6]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[10]' (FDE) to 's0/display_reg[6]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[6]' (FDE) to 's0/display_reg[7]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[31]' (FDE) to 's0/display_reg[7]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[27]' (FDE) to 's0/display_reg[23]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[19]' (FDE) to 's0/display_reg[7]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[15]' (FDE) to 's0/display_reg[7]'
+INFO: [Synth 8-3886] merging instance 's0/display_reg[11]' (FDE) to 's0/display_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s0/display_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (display_reg[31]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[30]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[29]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[28]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[27]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[26]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[25]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[24]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[23]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[22]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[21]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[20]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[19]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[18]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[17]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[16]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[15]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[14]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[13]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[12]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[11]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[10]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[9]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[8]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[7]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[6]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[5]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[4]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[3]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[2]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[1]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (display_reg[0]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_nextState_reg) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (enable_reg[3]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (enable_reg[2]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (enable_reg[1]) is unused and will be removed from module whack_a_mole_top.
+WARNING: [Synth 8-3332] Sequential element (enable_reg[0]) is unused and will be removed from module whack_a_mole_top.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'enable_reg[0]__0/Q' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:52]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:52]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v:52]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 988.250 ; gain = 355.328
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 990.855 ; gain = 358.344
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -195,13 +313,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 988.250 ; gain = 355.328
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 990.855 ; gain = 358.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 988.250 ; gain = 355.328
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 990.855 ; gain = 358.344
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -213,7 +331,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 988.250 ; gain = 355.328
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 990.855 ; gain = 358.344
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -237,7 +355,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 992.512 ; gain = 359.590
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 992.340 ; gain = 359.828
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -250,7 +368,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 992.512 ; gain = 359.590
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 992.340 ; gain = 359.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,25 +380,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 992.512 ; gain = 359.590
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 992.340 ; gain = 359.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 992.512 ; gain = 359.590
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 992.340 ; gain = 359.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 992.512 ; gain = 359.590
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 992.340 ; gain = 359.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 992.512 ; gain = 359.590
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 992.340 ; gain = 359.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -298,52 +416,59 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    11|
-|3     |LUT1   |     3|
-|4     |LUT2   |     2|
-|5     |LUT3   |     3|
-|6     |LUT4   |    24|
-|7     |LUT5   |     2|
-|8     |LUT6   |    21|
-|9     |FDCE   |    28|
-|10    |FDRE   |    43|
-|11    |FDSE   |     1|
-|12    |IBUF   |     2|
-|13    |OBUF   |    15|
+|3     |LUT1   |     4|
+|4     |LUT2   |     3|
+|5     |LUT3   |    29|
+|6     |LUT4   |    28|
+|7     |LUT5   |    13|
+|8     |LUT6   |    26|
+|9     |FDCE   |    62|
+|10    |FDPE   |     4|
+|11    |FDRE   |    18|
+|12    |LD     |     4|
+|13    |IBUF   |     2|
+|14    |OBUF   |    15|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+------------+--------------------------+------+
-|      |Instance    |Module                    |Cells |
-+------+------------+--------------------------+------+
-|1     |top         |                          |   156|
-|2     |  c_dMTokHz |clock_divider100MHzTo1kHz |    44|
-|3     |  d_c       |display_control           |    30|
-|4     |    c1      |count2                    |    18|
-|5     |  s0        |startup                   |    50|
-|6     |  s_7_d     |seven_segment_decoder     |    14|
-+------+------------+--------------------------+------+
++------+-------------------+--------------------------+------+
+|      |Instance           |Module                    |Cells |
++------+-------------------+--------------------------+------+
+|1     |top                |                          |   220|
+|2     |  c_dMToHz         |clock_divider100MHzTo1Hz  |    68|
+|3     |  c_dMTokHz        |clock_divider100MHzTo1kHz |    44|
+|4     |  d_c              |display_control           |    29|
+|5     |    c1             |count2                    |    17|
+|6     |  s0               |startup                   |    19|
+|7     |    countdown_five |down_counter_0            |    11|
+|8     |  s1               |startup1                  |    27|
+|9     |    countdown_five |down_counter              |    22|
+|10    |  s_7_d            |seven_segment_decoder     |    14|
++------+-------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 992.512 ; gain = 359.590
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 992.340 ; gain = 359.828
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 992.512 ; gain = 245.695
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 992.512 ; gain = 359.590
+Synthesis finished with 0 errors, 3 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 992.340 ; gain = 242.398
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 992.340 ; gain = 359.828
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1010.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1015.156 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 4 instances were transformed.
+  LD => LDCE: 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-27 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+61 Infos, 45 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1010.773 ; gain = 656.234
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1010.773 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 1015.156 ; gain = 661.246
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1015.156 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/synth_1/whack_a_mole_top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/synth_1/whack_a_mole_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1015.156 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file whack_a_mole_top_utilization_synth.rpt -pb whack_a_mole_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  4 17:43:33 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  5 18:16:10 2019...

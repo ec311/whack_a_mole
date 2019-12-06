@@ -27,7 +27,7 @@ module clock_divider_Hz(
     );
     
     reg [31:0] counter;
-    parameter constant = 2;//100000000;
+    parameter constant = 100000000;//100000000;
     
     always @ (posedge clock or posedge reset) begin
         if (reset == 1) begin

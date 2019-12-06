@@ -2,11 +2,11 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Dec  4 16:22:27 2019
-# Process ID: 27972
+# Start of session at: Thu Dec  5 16:58:13 2019
+# Process ID: 924
 # Current directory: X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim/xsim.dir/mole_state_testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim/xsim.dir/lfsr_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim/xsim.dir/mole_state_testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+source X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim/xsim.dir/lfsr_tb_behav/webtalk/xsim_webtalk.tcl -notrace

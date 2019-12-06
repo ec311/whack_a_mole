@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Dec  4 17:44:38 2019
-| Host             : ECE-PHO115-10 running 64-bit major release  (build 9200)
+| Date             : Thu Dec  5 18:17:48 2019
+| Host             : ECE-PHO115-18 running 64-bit major release  (build 9200)
 | Command          : report_power -file whack_a_mole_top_power_routed.rpt -pb whack_a_mole_top_power_summary_routed.pb -rpx whack_a_mole_top_power_routed.rpx
 | Design           : whack_a_mole_top
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.783        |
+| Total On-Chip Power (W)  | 1.609        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.697        |
-| Device Static (W)        | 0.086        |
+| Dynamic (W)              | 1.520        |
+| Device Static (W)        | 0.089        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 81.4         |
-| Junction Temperature (C) | 28.6         |
+| Max Ambient (C)          | 77.7         |
+| Junction Temperature (C) | 32.3         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.392 |      147 |       --- |             --- |
-|   LUT as Logic |     0.337 |       44 |     63400 |            0.07 |
+| Slice Logic    |     0.890 |      218 |       --- |             --- |
+|   LUT as Logic |     0.819 |       75 |     63400 |            0.12 |
+|   Register     |     0.039 |       88 |    126800 |            0.07 |
 |   CARRY4       |     0.026 |       11 |     15850 |            0.07 |
-|   Register     |     0.023 |       72 |    126800 |            0.06 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |     0.300 |      113 |       --- |             --- |
+|   Others       |     0.000 |       15 |       --- |             --- |
+| Signals        |     0.625 |      168 |       --- |             --- |
 | I/O            |     0.004 |       17 |       210 |            8.10 |
-| Static Power   |     0.086 |          |           |                 |
-| Total          |     0.783 |          |           |                 |
+| Static Power   |     0.089 |          |           |                 |
+| Total          |     1.609 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,8 +71,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.713 |       0.697 |      0.017 |
-| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
+| Vccint    |       1.000 |     1.540 |       1.520 |      0.020 |
+| Vccaux    |       1.800 |     0.019 |       0.000 |      0.019 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -135,14 +135,18 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------+-----------+
-| Name             | Power (W) |
-+------------------+-----------+
-| whack_a_mole_top |     0.697 |
-|   c_dMTokHz      |     0.354 |
-|   d_c            |     0.211 |
-|     c1           |     0.211 |
-|   s0             |     0.113 |
-+------------------+-----------+
++--------------------+-----------+
+| Name               | Power (W) |
++--------------------+-----------+
+| whack_a_mole_top   |     1.520 |
+|   c_dMToHz         |     0.426 |
+|   c_dMTokHz        |     0.346 |
+|   d_c              |     0.229 |
+|     c1             |     0.229 |
+|   s0               |     0.151 |
+|     countdown_five |     0.110 |
+|   s1               |     0.347 |
+|     countdown_five |     0.282 |
++--------------------+-----------+
 
 
