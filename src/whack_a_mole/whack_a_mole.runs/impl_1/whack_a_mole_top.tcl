@@ -61,8 +61,6 @@ proc step_failed { step } {
 }
 
 set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -73,12 +71,12 @@ set rc [catch {
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.cache/wt [current_project]
-  set_property parent.project_path X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.xpr [current_project]
-  set_property ip_output_repo X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.cache/wt [current_project]
+  set_property parent.project_path C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.xpr [current_project]
+  set_property ip_output_repo C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/synth_1/whack_a_mole_top.dcp
-  read_xdc X:/Desktop/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc
+  add_files -quiet C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/synth_1/whack_a_mole_top.dcp
+  read_xdc C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc
   link_design -top whack_a_mole_top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

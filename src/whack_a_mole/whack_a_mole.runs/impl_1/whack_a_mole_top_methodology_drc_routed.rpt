@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Dec  5 18:17:47 2019
-| Host         : ECE-PHO115-18 running 64-bit major release  (build 9200)
+| Date         : Sat Dec  7 10:41:42 2019
+| Host         : ECE-PHO115-09 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file whack_a_mole_top_methodology_drc_routed.rpt -pb whack_a_mole_top_methodology_drc_routed.pb -rpx whack_a_mole_top_methodology_drc_routed.rpx
 | Design       : whack_a_mole_top
 | Device       : xc7a100tcsg324-1
@@ -23,12 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 88
+             Violations found: 77
 +-----------+------------------+-----------------------------+------------+
 | Rule      | Severity         | Description                 | Violations |
 +-----------+------------------+-----------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell | 84         |
-| TIMING-20 | Warning          | Non-clocked latch           | 4          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell | 77         |
 +-----------+------------------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -360,117 +359,62 @@ Related violations: <none>
 
 TIMING-17#66 Critical Warning
 Non-clocked sequential cell  
-The clock pin s0/countdown_five/counterOut_reg[4]/C is not reached by a timing clock
+The clock pin s0/display_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#67 Critical Warning
 Non-clocked sequential cell  
-The clock pin s0/display_reg[0]/C is not reached by a timing clock
+The clock pin s0/display_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#68 Critical Warning
 Non-clocked sequential cell  
-The clock pin s0/display_reg[1]/C is not reached by a timing clock
+The clock pin s0/display_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#69 Critical Warning
 Non-clocked sequential cell  
-The clock pin s0/display_reg[23]/C is not reached by a timing clock
+The clock pin s0/display_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#70 Critical Warning
 Non-clocked sequential cell  
-The clock pin s0/display_reg[2]/C is not reached by a timing clock
+The clock pin s0/done_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#71 Critical Warning
 Non-clocked sequential cell  
-The clock pin s0/display_reg[3]/C is not reached by a timing clock
+The clock pin s_7_d/displaySegments_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#72 Critical Warning
 Non-clocked sequential cell  
-The clock pin s0/done_or_not_reg/C is not reached by a timing clock
+The clock pin s_7_d/displaySegments_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#73 Critical Warning
 Non-clocked sequential cell  
-The clock pin s1/countdown_five/counterOut_reg[0]/C is not reached by a timing clock
+The clock pin s_7_d/displaySegments_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#74 Critical Warning
 Non-clocked sequential cell  
-The clock pin s1/countdown_five/counterOut_reg[1]/C is not reached by a timing clock
+The clock pin s_7_d/displaySegments_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#75 Critical Warning
 Non-clocked sequential cell  
-The clock pin s1/countdown_five/counterOut_reg[2]/C is not reached by a timing clock
+The clock pin s_7_d/displaySegments_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#76 Critical Warning
 Non-clocked sequential cell  
-The clock pin s1/countdown_five/counterOut_reg[3]/C is not reached by a timing clock
+The clock pin s_7_d/displaySegments_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#77 Critical Warning
 Non-clocked sequential cell  
-The clock pin s1/countdown_five/counterOut_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#78 Critical Warning
-Non-clocked sequential cell  
-The clock pin s_7_d/displaySegments_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#79 Critical Warning
-Non-clocked sequential cell  
-The clock pin s_7_d/displaySegments_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#80 Critical Warning
-Non-clocked sequential cell  
-The clock pin s_7_d/displaySegments_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#81 Critical Warning
-Non-clocked sequential cell  
-The clock pin s_7_d/displaySegments_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#82 Critical Warning
-Non-clocked sequential cell  
-The clock pin s_7_d/displaySegments_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#83 Critical Warning
-Non-clocked sequential cell  
-The clock pin s_7_d/displaySegments_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#84 Critical Warning
-Non-clocked sequential cell  
 The clock pin s_7_d/displaySegments_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch s1/count_tens_reg[0] cannot be properly analyzed as its control pin s1/count_tens_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch s1/count_tens_reg[1] cannot be properly analyzed as its control pin s1/count_tens_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch s1/count_tens_reg[2] cannot be properly analyzed as its control pin s1/count_tens_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#4 Warning
-Non-clocked latch  
-The latch s1/count_tens_reg[3] cannot be properly analyzed as its control pin s1/count_tens_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 

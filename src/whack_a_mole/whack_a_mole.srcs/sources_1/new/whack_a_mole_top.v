@@ -24,7 +24,7 @@ module whack_a_mole_top(
         input clk,
         input reset,
         output [7:0] ANLine,
-        output [6:0] displaySegments 
+        output [6:0] displaySegments
     );
     wire outClk_kHz;
     wire outClk_Hz;
@@ -52,9 +52,7 @@ module whack_a_mole_top(
     
     // Input - top level clock, 1Hz clock, enable signal, reset
     // Output - a 32 bit bus containing everything that will be displayed in binary (display)
-    startup s0(.clk(clk), .clk_1Hz(outClk_Hz), .enable(enable[0]), .reset(reset), .display(display_s0), .done_or_not(done_0));
-    startup1 s1(.clk(clk), .clk_1Hz(outClk_Hz), .reset(done_0), .display(display_s1), .done_or_not(done_1));
-
+    startup s0(.clk(clk), .clk_1Hz(outClk_Hz), .enable(enable[0]), .reset(reset), .display(display_s0), .done(done_0));
     
     // Input - 1 KHz clock, reset, a 32 bit bus containing everything that will be displayed in binary (display)
     // Output - 8 bit bus for what segment should be used (ANLine), 4 bit bus containing what character should be used (character)
@@ -88,6 +86,7 @@ module whack_a_mole_top(
             4'b0001: begin
                 nextState <= (done_1) ? 4'b0000 : 4'b0001;
                 display <= (done_1) ? display_s0 : display_s1;
+                enable <= (done_1) ? 4'b0001 : 4'b0010;
             end
         endcase
     end

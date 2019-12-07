@@ -26,29 +26,29 @@ module startup(
     input enable,
     input reset,
     output reg [31:0] display,
-    output reg done_or_not
+    output reg done
     );
     
     wire [3:0] count;
-    wire [3:0] countdownTimer = 4'b0101;
+    reg [3:0] countdownTimer;
     
-    down_counter countdown_five(.clk(clk_1Hz), .enable(enable), .reset(reset), .value(countdownTimer), .counterOut(count));
-    
-    // pass counter output to display
-    always@(posedge clk, posedge reset) begin
-        if (enable) begin
-            if (reset) begin
-                display = 0;
-                done_or_not = 0;
+    down_counter countdown_five(.clk(clk_1Hz), .reset(reset), .value(countdownTimer), .counterOut(count));
+
+    always@(posedge clk) begin
+        if (enable == 1) begin
+            if (reset == 1) begin
+                countdownTimer <= 4'b0101;
+                done <= 0;
             end else begin
                 if (count == 0) begin
-                    done_or_not <= 1;
+                    done <= 1;
                 end else begin
-                    done_or_not <= 0;
+                    done <= 0;
                 end
                 display = {16'b0000110011000000, 12'b000000000000, count};
             end
+        end else begin
+            done <= 0;
         end
-
     end
 endmodule

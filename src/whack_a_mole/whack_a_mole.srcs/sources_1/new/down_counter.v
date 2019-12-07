@@ -23,14 +23,12 @@
 module down_counter(
     // 1Hz
     input clk,
-    input enable,
     input reset,
-    input [4:0] value,
-    output reg [4:0] counterOut
+    input [3:0] value,
+    output reg [3:0] counterOut
     );
     
     always @ (posedge clk or posedge reset) begin
-        if (enable) begin
             if (reset == 1) begin
                 counterOut <= value;
             end else begin
@@ -40,5 +38,4 @@ module down_counter(
                     counterOut <= value; 
             end
         end
-    end  
 endmodule

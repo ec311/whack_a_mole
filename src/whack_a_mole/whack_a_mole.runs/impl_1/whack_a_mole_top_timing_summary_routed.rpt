@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Dec  5 18:17:48 2019
-| Host         : ECE-PHO115-18 running 64-bit major release  (build 9200)
+| Date         : Sat Dec  7 10:41:43 2019
+| Host         : ECE-PHO115-09 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file whack_a_mole_top_timing_summary_routed.rpt -pb whack_a_mole_top_timing_summary_routed.pb -rpx whack_a_mole_top_timing_summary_routed.rpx -warn_on_violation
 | Design       : whack_a_mole_top
 | Device       : 7a100t-csg324
@@ -53,19 +53,11 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 59 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 58 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: c_dMToHz/outClk_reg/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: c_dMToHz/outClk_reg/Q (HIGH)
 
  There are 15 register/latch pins with no clock driven by root clock pin: c_dMTokHz/outClk_reg/Q (HIGH)
-
- There are 4 register/latch pins with no clock driven by root clock pin: s1/countdown_five/counterOut_reg[0]/Q (HIGH)
-
- There are 4 register/latch pins with no clock driven by root clock pin: s1/countdown_five/counterOut_reg[1]/Q (HIGH)
-
- There are 4 register/latch pins with no clock driven by root clock pin: s1/countdown_five/counterOut_reg[2]/Q (HIGH)
-
- There are 4 register/latch pins with no clock driven by root clock pin: s1/countdown_five/counterOut_reg[3]/Q (HIGH)
 
 
 2. checking constant_clock
@@ -80,7 +72,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 163 pins that are not constrained for maximum delay. (HIGH)
+ There are 146 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -128,7 +120,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 4 combinational latch loops in the design through latch input (HIGH)
+ There are 0 combinational latch loops in the design through latch input
 
 
 
