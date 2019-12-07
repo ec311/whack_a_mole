@@ -45,7 +45,7 @@ module startup(
                 end else begin
                     done <= 0;
                 end
-                display = {16'b0000110011000000, 12'b000000000000, count};
+                display <= {16'b0000110011000000, 12'b000000000000, count};
             end
         end else begin
             done <= 0;

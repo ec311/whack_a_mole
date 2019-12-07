@@ -20,28 +20,35 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mole_state(Clock_1HZ, mole_number, buttons, led, win_or_not
+module check_mole_hit(
+    input clk,
+    input clk_1Hz,
+    input [2:0] mole_number,
+    input [7:0] switches,
+    output win
     );
-    input Clock_1HZ;
-    input [2:0]mole_number;
-    input [7:0]buttons;
-    output reg [7:0]led;
-    output reg win_or_not;
-    
-    always@(*) begin
-        // Inside the 1 second period
-        if (Clock_1HZ) begin
-            led[mole_number] = 1;
-            if (buttons[mole_number] == 1'b1) begin
-                win_or_not = 1'b1;
-            end
-        end
+//    input clk_1Hz;
+//    input [2:0]mole_number;
+//    input [7:0]buttons;
+//    output reg [4:0] led;//[7:0]led;
+//    output reg win_or_not;
+//    always @(posedge clk) begin
+     
+//    end
+//    always@(*) begin
+//        // Inside the 1 second period
+//        if (clk_1Hz) begin
+//            led[mole_number] = 1;
+//            if (buttons[mole_number] == 1'b1) begin
+//                win_or_not = 1'b1;
+//            end
+//        end
         
-        // 1 second period ended
-        else begin
-            led = 8'b00000000;
-            win_or_not = 1'b0;
-        end
-    end
+//        // 1 second period ended
+//        else begin
+//            led = 8'b00000000;
+//            win_or_not = 1'b0;
+//        end
+//    end
     
 endmodule

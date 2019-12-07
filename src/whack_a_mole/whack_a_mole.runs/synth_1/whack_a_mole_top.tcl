@@ -44,6 +44,8 @@ read_verilog -library xil_defaultlib {
   C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup.v
   C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v
   C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup1.v
+  C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/binary_to_BCD.v
+  C:/Users/liben002/Downloads/ec311/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/led_select.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

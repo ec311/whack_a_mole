@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Dec  7 10:41:43 2019
+| Date         : Sat Dec  7 16:17:32 2019
 | Host         : ECE-PHO115-09 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file whack_a_mole_top_timing_summary_routed.rpt -pb whack_a_mole_top_timing_summary_routed.pb -rpx whack_a_mole_top_timing_summary_routed.rpx -warn_on_violation
 | Design       : whack_a_mole_top
@@ -53,11 +53,13 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 58 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 66 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: c_dMToHz/outClk_reg/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: c_dMToHz/outClk_reg/Q (HIGH)
 
  There are 15 register/latch pins with no clock driven by root clock pin: c_dMTokHz/outClk_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: enable_reg[1]/Q (HIGH)
 
 
 2. checking constant_clock
@@ -72,7 +74,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 146 pins that are not constrained for maximum delay. (HIGH)
+ There are 204 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -86,7 +88,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 15 ports with no output delay specified. (HIGH)
+ There are 23 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

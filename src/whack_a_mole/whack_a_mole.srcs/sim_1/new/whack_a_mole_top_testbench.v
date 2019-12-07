@@ -31,10 +31,14 @@ module whack_a_mole_top_testbench(
     initial begin
         clk = 0; reset = 1;
         #10 reset = 0;
+        forever #0.00001 clk = ~clk;
     end
     
     always begin
-        #0.00001 clk = ~clk;
+        #100;
+        reset = 1;
+        #100;
+        reset = 0;
         #40000 $finish;
     end
 endmodule

@@ -19,6 +19,26 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+module clock_divider100MHzToTenthHz(
+    input clk,
+    input reset,
+    output reg outClk
+    );
+    
+    reg [28:0] count;    
+
+    always @(posedge clk, posedge reset) begin
+        if (reset) begin
+            outClk <= 0;
+            count <= 0;
+        end else if (count == 29'b11101110011010110010100000000) begin
+            outClk <= ~outClk;
+            count <= 0;
+        end else 
+            count <= count + 1'b1;
+    end
+    
+endmodule
 
 module clock_divider100MHzTo1Hz(
     input clk,

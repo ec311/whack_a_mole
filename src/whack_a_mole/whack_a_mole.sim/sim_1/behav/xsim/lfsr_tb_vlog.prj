@@ -12,9 +12,11 @@ verilog xil_defaultlib  \
 "../../../../whack_a_mole.srcs/sources_1/new/startup.v" \
 "../../../../whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v" \
 "../../../../whack_a_mole.srcs/sources_1/new/startup1.v" \
+"../../../../whack_a_mole.srcs/sources_1/new/binary_to_BCD.v" \
 "../../../../whack_a_mole.srcs/sim_1/new/lfsr_tb.v" \
 "../../../../whack_a_mole.srcs/sim_1/new/mole_state_testbench.v" \
 "../../../../whack_a_mole.srcs/sim_1/new/whack_a_mole_top_testbench.v" \
+"../../../../whack_a_mole.srcs/sim_1/new/startup1_testy.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

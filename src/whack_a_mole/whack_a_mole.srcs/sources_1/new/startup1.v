@@ -23,63 +23,35 @@
 module startup1(
     input clk,
     input clk_1Hz,
+    input clk_TenthHz,
     input enable,
     input reset,
-    output reg [31:0] display,
+    output reg [15:0] display,
     output reg done
     );
     
-    reg [3:0] countTens;
-    reg [3:0] countOnes;
-    wire [3:0] countOnes_int;
-    reg [3:0] countdownTimer;
+    wire [4:0] countBinary;
+    wire [3:0] hundreds;
+    wire [3:0] tens;
+    wire [3:0] ones;
+    reg [4:0] countdownTimer;
     
-    
-    down_counter countdown_five(.clk(clk_1Hz), .reset(reset), .value(countdownTimer), .counterOut(countOnes_int));
+    down_counter countdownOnes(.clk(clk_1Hz), .reset(reset), .value(countdownTimer), .counterOut(countBinary));
+    binary_to_BCD(.binary(countBinary), .hundreds(hundreds), .tens(tens), .ones(ones));
+//    down_counter countdownTens(.clk(clk_TenthHz), .reset(reset), .value(countdownTimerTens), .counterOut(countTens));
     
     if (1 == 1) begin
         always @ (posedge clk) begin
             if (reset == 1) begin
-                countTens <= 4'b0010;
-                countdownTimer <= 4'b1001;
+                countdownTimer <= 5'b11110;
                 done <= 0;
             end else begin
-                if (countTens == 0 && countOnes == 0) begin
+                  if (countBinary == 0) begin
                     done <= 1;
-                end else begin
-                    done <= 0;
-                end
-                display = {16'b0000110011000000, 8'b00000000, countTens, countOnes};
+                  end
+                display = {8'b00000000, tens, ones};
             end
         end
-        
-        always @ (countOnes) begin
-            if (countOnes == 0) begin
-                countTens <= countTens - 1;
-            end
-        end
-        
-        assign countOnes_int = countOnes;
-        
     end
-    
-    
-//    assign display = {16'b0000110011000000, 8'b00000000, count_tens, count_ones};
-//    // pass counter output to display
-//    always@(count_ones) begin
-//        if (count_tens == 2 || count_tens == 1) begin
-//            if (count_ones == 0) begin
-//                count_tens <= count_tens - 1'b1;
-//            end
-//            done_or_not <= 1'b0;
-//        end else begin
-//            if (count_ones == 0) begin
-////                count_tens <= 1'b0; // probably not needed because when count_tens is 0 it will never go back
-//                done_or_not <= 1'b1;
-//            end else begin
-//                done_or_not <= 1'b0;
-//            end
-//        end
-//    end
 endmodule
 

@@ -24,35 +24,40 @@ module whack_a_mole_top(
         input clk,
         input reset,
         output [7:0] ANLine,
-        output [6:0] displaySegments
+        output [6:0] displaySegments,
+        output [7:0] leds
     );
     wire outClk_kHz;
     wire outClk_Hz;
+    wire outClk_TenthHz;
     reg [3:0] state;
     reg [3:0] nextState;
     wire [3:0] character;
     reg [31:0] display;
-    wire [31:0] display_s0; // startup
-    wire [31:0] display_s1;
+    wire [31:0] display_s0;
+    wire [15:0] display_s1;
+    wire [15:0] score_display;
     
-    reg [3:0]enable;
+    reg [3:0] enable;
+    reg [3:0] nextEnable;
 
-    wire [7:0] random_num;
+    wire [2:0] random_num;
+    wire [2:0] mole_num;
+    wire [7:0] buttons;
     wire done_0;
     wire done_1;
     wire win_or_not;
     
-    // CURRENTLY THERE ARE TWO STATES THAT BOTH COUNTDOWN, ONE FROM 5, ONE FROM 30. MAKE SURE THEY WORK
-    // AS INTENDED FIRST     !!ON THE FPGA!!      BEFORE IMPLEMENTING ANYTHING ELSE
-    // may be due to passing done to startup s1 reset.
-    
     // top level clock dividers, pass to each module that uses it
     clock_divider100MHzTo1kHz c_dMTokHz(.clk(clk), .reset(reset), .outClk(outClk_kHz));
     clock_divider100MHzTo1Hz c_dMToHz(.clk(clk), .reset(reset), .outClk(outClk_Hz));
+    clock_divider100MHzToTenthHz c_dMToTenthHz(.clk(clk), .reset(reset), .outClk(outClk_TenthHz));
     
     // Input - top level clock, 1Hz clock, enable signal, reset
     // Output - a 32 bit bus containing everything that will be displayed in binary (display)
     startup s0(.clk(clk), .clk_1Hz(outClk_Hz), .enable(enable[0]), .reset(reset), .display(display_s0), .done(done_0));
+    startup1 s1(.clk(clk), .clk_1Hz(outClk_Hz), .clk_TenthHz(outClk_TenthHz), .enable(enable[1]), .reset(done_0), .display(display_s1), .done(done_1));
+
     
     // Input - 1 KHz clock, reset, a 32 bit bus containing everything that will be displayed in binary (display)
     // Output - 8 bit bus for what segment should be used (ANLine), 4 bit bus containing what character should be used (character)
@@ -67,12 +72,23 @@ module whack_a_mole_top(
         //      5 second counter (should be the same as 30 second) - BRIANA
     //          input - 5 and down count instruction, output - character encoded in 4 bits for count
     
+    
+    score_cnt score_counter(.win_or_not(1'b0), .reset(reset), .score_display(score_display));
+    
+    // 
+    LFSR4 my_randomizer(.clk(outClk_Hz), .reset(reset), .number(random_num));
+    
+    led_select l1(.enable(enable[1]), .reset(reset), .random_num(random_num), .leds(leds), .mole_num(mole_num));
+    
+//    mole_state m1(.Clock_1HZ(outClk_Hz), .mole_number(mole_num), .buttons(buttons), .led(leds), .win_or_not(win_or_not));
+    
     always @ (posedge clk, posedge reset) begin
         if (reset) begin
             state <= 4'b0000;
             enable <= 4'b0001;
         end else begin
             state <= nextState;
+            enable <= nextEnable;
         end
     end
     
@@ -80,16 +96,41 @@ module whack_a_mole_top(
         case(state)
             4'b0000: begin
                 nextState <= (done_0) ? 4'b0001 : 4'b0000;
-                display <= (done_0) ? display_s1 : display_s0;
-                enable <= (done_0) ? 4'b0010 : 4'b0001;
+                display <= (done_0) ? {score_display, display_s1} : display_s0;
+                nextEnable <= (done_0) ? 4'b0010 : 4'b0001;
             end
             4'b0001: begin
                 nextState <= (done_1) ? 4'b0000 : 4'b0001;
-                display <= (done_1) ? display_s0 : display_s1;
-                enable <= (done_1) ? 4'b0001 : 4'b0010;
+                display <= (done_1) ? display_s0 : {score_display, display_s1};
+                nextEnable <= (done_1) ? 4'b0001 : 4'b0010;
             end
         endcase
     end
+    
+//    always @ (posedge clk or posedge reset) begin
+//        if (reset)
+//            leds = 5'b00000;
+//        if (random_num == 3'b000) begin
+//            leds[0] = 1'b1;
+//            leds[4:1] = 4'b0000;
+//        end else if (random_num == 3'b001 | random_num == 3'b010) begin
+//            leds[4:0] = 5'b00000;
+//            leds[1] = 1'b1;
+//        end else if (random_num == 3'b011 | random_num == 3'b100) begin
+//            leds[4:0] = 5'b00000;
+//            leds[2] = 1'b1;
+//        end else if (random_num == 3'b101 | random_num == 3'b110) begin
+//            leds[4:0] = 5'b00000;
+//            leds[3] = 1'b1;
+//        end else if (random_num == 3'b111) begin
+//            leds[4] = 1'b1;
+//            leds[3:0] = 4'b0000;
+//        end
+//    end
+            
+            
+    
+    
     
     // game module
     //      30 second counter (should be the same as 5 second) - BRIANA

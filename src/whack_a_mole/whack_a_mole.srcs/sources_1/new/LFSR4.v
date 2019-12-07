@@ -19,21 +19,23 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module LFSR4 (number, clk, reset);
-
-output reg [2:0] number;
-input clk, reset;
-wire feedback;
-reg [7:0] out;
-assign feedback = ~(out[3] ^ out[2]);
-always @(posedge clk)
-  begin
-    if (reset)
-      out <= 8'b0;
-    else
-      out <= {out[6:0],feedback};
-      number <= out[2:0];
-  end
-
-
+module LFSR4 (
+    input clk,
+    input reset,
+    output reg [2:0] number
+    );
+    
+    wire feedback;
+    reg [7:0] out;
+    
+    //  TERRY - COMMENT WHAT THIS ACTUALLY DOES
+    assign feedback = ~(out[3] ^ out[2]);
+    always @(posedge clk) begin
+        if (reset == 1)
+          out <= 0;
+        else
+          out <= {out[6:0], feedback};
+          number <= out[2:0];
+      end
+      
 endmodule
