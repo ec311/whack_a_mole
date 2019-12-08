@@ -30,7 +30,6 @@ set_property ip_output_repo x:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mol
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR4.v
   X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v
   X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/count2.v
   X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/display_control.v
@@ -43,6 +42,7 @@ read_verilog -library xil_defaultlib {
   X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup1.v
   X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/binary_to_BCD.v
   X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/led_select.v
+  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR4_copy.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

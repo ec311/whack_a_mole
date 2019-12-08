@@ -2,195 +2,71 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Dec  8 16:08:33 2019
-# Process ID: 14228
+# Start of session at: Sun Dec  8 16:57:55 2019
+# Process ID: 10820
 # Current directory: X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/impl_1
 # Command line: vivado.exe -log whack_a_mole_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source whack_a_mole_top.tcl -notrace
 # Log file: X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/impl_1/whack_a_mole_top.vdi
 # Journal file: X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source whack_a_mole_top.tcl -notrace
-Command: link_design -top whack_a_mole_top -part xc7a100tcsg324-1
-Design is defaulting to srcset: sources_1
-Design is defaulting to constrset: constrs_1
+Command: open_checkpoint whack_a_mole_top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 298.762 ; gain = 0.000
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [X:/Desktop/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]
-Finished Parsing XDC File [X:/Desktop/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 748.109 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 1325.043 ; gain = 14.523
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 1325.043 ; gain = 14.523
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1325.043 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-link_design completed successfully
-link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 752.117 ; gain = 391.684
-Command: opt_design
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.1 (64-bit) build 2552052
+open_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1325.043 ; gain = 1026.281
+Command: write_bitstream -force whack_a_mole_top.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
-Running DRC as a precondition to command opt_design
-
-Starting DRC Task
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Project 1-461] DRC finished with 0 Errors
-INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.580 . Memory (MB): peak = 773.375 ; gain = 21.258
-
-Starting Cache Timing Information Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 112e7a846
-
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1323.109 ; gain = 549.734
-
-Starting Logic Optimization Task
-
-Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 112e7a846
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1467.039 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
-
-Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 112e7a846
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1467.039 ; gain = 0.000
-INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
-
-Phase 3 Sweep
-Phase 3 Sweep | Checksum: c0008115
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1467.039 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 0 cells
-
-Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: c0008115
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1467.039 ; gain = 0.000
-INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
-
-Phase 5 Shift Register Optimization
-INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: c0008115
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 1467.039 ; gain = 0.000
-INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
-
-Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: c0008115
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1467.039 ; gain = 0.000
-INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-Opt_design Change Summary
-=========================
-
-
--------------------------------------------------------------------------------------------------------------------------
-|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
--------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               0  |                                              0  |
-|  Constant propagation         |               0  |               0  |                                              0  |
-|  Sweep                        |               1  |               0  |                                              0  |
-|  BUFG optimization            |               0  |               0  |                                              0  |
-|  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                              0  |
--------------------------------------------------------------------------------------------------------------------------
-
-
-
-Starting Connectivity Check Task
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1467.039 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 12c35cfb7
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 1467.039 ; gain = 0.000
-
-Starting Power Optimization Task
-INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 12c35cfb7
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1467.039 ; gain = 0.000
-
-Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 12c35cfb7
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1467.039 ; gain = 0.000
-
-Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1467.039 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 12c35cfb7
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1467.039 ; gain = 0.000
-INFO: [Common 17-83] Releasing license: Implementation
-24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1467.039 ; gain = 714.922
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1467.039 ; gain = 0.000
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Writing placer database...
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.462 . Memory (MB): peak = 1467.039 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/impl_1/whack_a_mole_top_opt.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_drc -file whack_a_mole_top_drc_opted.rpt -pb whack_a_mole_top_drc_opted.pb -rpx whack_a_mole_top_drc_opted.rpx
-Command: report_drc -file whack_a_mole_top_drc_opted.rpt -pb whack_a_mole_top_drc_opted.pb -rpx whack_a_mole_top_drc_opted.rpx
+Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/impl_1/whack_a_mole_top_drc_opted.rpt.
-report_drc completed successfully
-Command: place_design
-Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-Running DRC as a precondition to command place_design
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
 
-Starting Placer Task
-INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
 
-Phase 1 Placer Initialization
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
 
-Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1467.039 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a0e31ab0
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1467.039 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1467.039 ; gain = 0.000
-
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-ERROR: [Place 30-574] Poor placement for routing between an IO pin and BUFG. If this sub optimal condition is acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint in the .xdc file to demote this message to a WARNING. However, the use of this override is highly discouraged. These examples can be used directly in the .xdc file to override this clock rule.
-	< set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets reset_IBUF] >
-
-	reset_IBUF_inst (IBUF.O) is locked to IOB_X0Y58
-	reset_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y0
-Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b54525a0
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.915 . Memory (MB): peak = 1467.039 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: b54525a0
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.919 . Memory (MB): peak = 1467.039 ; gain = 0.000
-ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
-Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
-Ending Placer Task | Checksum: b54525a0
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.923 . Memory (MB): peak = 1467.039 ; gain = 0.000
+Refer to the device configuration user guide for more information.
+WARNING: [DRC PDRC-153] Gated clock check: Net l1/mole_num_reg[2]_i_1_n_0 is a gated clock net sourced by a combinational pin l1/mole_num_reg[2]_i_1/O, cell l1/mole_num_reg[2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./whack_a_mole_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-42 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
-place_design failed
-ERROR: [Common 17-69] Command failed: Placer could not place all instances
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 16:09:04 2019...
+21 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1800.453 ; gain = 475.410
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 16:58:34 2019...
