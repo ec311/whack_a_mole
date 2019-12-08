@@ -31,7 +31,7 @@ module down_counter(
             if (reset == 1) begin
                 counterOut <= value;
             end else begin
-                if (counterOut != 5'b00000)
+                if (counterOut != 5'b11111)
                     counterOut <= counterOut - 1;
                 else
                     counterOut <= value; 

@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Dec  8 14:38:35 2019
-# Process ID: 14180
+# Start of session at: Sun Dec  8 15:07:59 2019
+# Process ID: 11132
 # Current directory: X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/impl_1
 # Command line: vivado.exe -log whack_a_mole_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source whack_a_mole_top.tcl -notrace
 # Log file: X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.runs/impl_1/whack_a_mole_top.vdi

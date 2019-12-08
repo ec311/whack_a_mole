@@ -84,7 +84,7 @@ module whack_a_mole_top(
 
     check_mole_hit m1(.reset(reset), .clk(clk), .enable(enable[1]), .clk_1Hz(outClk_Hz), .mole_number(mole_num), .switches(switches), .win(win));
     
-    score_cnt score_counter(.clk(clk), .win(win), .reset(reset), .score_display(score_display));
+    score_cnt score_counter(.clk(clk), .win(win), .reset(reset), .done_1(done_1), .score_display(score_display));
     
     always @ (posedge clk, posedge reset) begin
         if (reset) begin

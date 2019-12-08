@@ -22,7 +22,8 @@
 module score_cnt(
     input clk,
     input win, 
-    input reset, 
+    input reset,
+    input done_1, 
     output reg [15:0] score_display
     );
 
@@ -34,12 +35,12 @@ module score_cnt(
     binary_to_BCD score_in_BCD(.binary(scoreBinary), .hundreds(hundreds), .tens(tens), .ones(ones));
     
     always @(posedge clk) begin
-        if (reset) begin
-            scoreBinary = 0;
+        if (reset | done_1) begin
+            scoreBinary <= 0;
         end else if (win == 1) begin
-            scoreBinary = scoreBinary + 1;
+            scoreBinary <= scoreBinary + 1;
         end
-        score_display = {tens, ones, 4'b1010, 4'b1011};
+        score_display <= {tens, ones, 4'b1010, 4'b1011};
     end
         
 
