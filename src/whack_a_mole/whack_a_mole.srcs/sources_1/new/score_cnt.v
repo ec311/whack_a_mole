@@ -19,26 +19,40 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module score_cnt(win_or_not, reset, score_display);
-  input win_or_not, reset;
-  reg [3:0] score;
-  wire [3:0] tens;
-  wire [3:0] ones;
-  wire [3:0] hundreds;
-  output reg [15:0] score_display;
-  
-  binary_to_BCD score_in_BCD(.binary(score), .hundreds(hundreds), .tens(tens), .ones(ones));
+module score_cnt(
+    input clk,
+    input win, 
+    input reset, 
+    output reg [15:0] score_display
+    );
 
-  always @ (win_or_not or reset) begin
-      if (reset == 1) begin
-        score <= 4'b0000; //Start at 0
-      end else if (win_or_not == 1) begin
-      score <= (score + 1'b1);  //Increment by 1 everytime there is a button press before 1 sec
-      end else begin
-      score <= score;
-      end
+    reg [3:0] scoreBinary;
+    wire [3:0] tens;
+    wire [3:0] ones;
+    wire [3:0] hundreds;
+  
+    binary_to_BCD score_in_BCD(.binary(scoreBinary), .hundreds(hundreds), .tens(tens), .ones(ones));
     
-      score_display = {4'b1010, 4'b1011, tens, ones};
+    always @(posedge clk) begin
+        if (reset) begin
+            scoreBinary = 0;
+        end else if (win == 1) begin
+            scoreBinary = scoreBinary + 1;
+        end
+        score_display = {tens, ones, 4'b1010, 4'b1011};
     end
+        
+
+//  always @ (win_or_not or reset) begin
+//      if (reset == 1) begin
+//        score <= 4'b0000; //Start at 0
+//      end else if (win_or_not == 1) begin
+//        score <= score + 1'b1;  //Increment by 1 everytime there is a button press before 1 sec
+//      end else begin
+//        score <= score;
+//      end
+    
+//      score_display = {4'b1010, 4'b1011, tens, ones};
+//    end
     
 endmodule

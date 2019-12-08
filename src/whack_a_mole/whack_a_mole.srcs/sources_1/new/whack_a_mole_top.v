@@ -23,9 +23,11 @@
 module whack_a_mole_top(
         input clk,
         input reset,
+        input [7:0] switches,
         output [7:0] ANLine,
         output [6:0] displaySegments,
-        output [7:0] leds
+        output [7:0] leds,
+        output win
     );
     wire outClk_kHz;
     wire outClk_Hz;
@@ -43,10 +45,10 @@ module whack_a_mole_top(
 
     wire [2:0] random_num;
     wire [2:0] mole_num;
-    wire [7:0] buttons;
+    //wire [7:0] switches;
     wire done_0;
     wire done_1;
-    wire win_or_not;
+//    wire win;
     
     // top level clock dividers, pass to each module that uses it
     clock_divider100MHzTo1kHz c_dMTokHz(.clk(clk), .reset(reset), .outClk(outClk_kHz));
@@ -73,14 +75,16 @@ module whack_a_mole_top(
     //          input - 5 and down count instruction, output - character encoded in 4 bits for count
     
     
-    score_cnt score_counter(.win_or_not(1'b0), .reset(reset), .score_display(score_display));
+    //score_cnt score_counter(.win_or_not(1'b0), .reset(reset), .score_display(score_display));
     
     // 
     LFSR4 my_randomizer(.clk(outClk_Hz), .reset(reset), .number(random_num));
     
     led_select l1(.enable(enable[1]), .reset(reset), .random_num(random_num), .leds(leds), .mole_num(mole_num));
+
+    check_mole_hit m1(.reset(reset), .clk(clk), .enable(enable[1]), .clk_1Hz(outClk_Hz), .mole_number(mole_num), .switches(switches), .win(win));
     
-//    mole_state m1(.Clock_1HZ(outClk_Hz), .mole_number(mole_num), .buttons(buttons), .led(leds), .win_or_not(win_or_not));
+    score_cnt score_counter(.clk(clk), .win(win), .reset(reset), .score_display(score_display));
     
     always @ (posedge clk, posedge reset) begin
         if (reset) begin
@@ -107,49 +111,5 @@ module whack_a_mole_top(
         endcase
     end
     
-//    always @ (posedge clk or posedge reset) begin
-//        if (reset)
-//            leds = 5'b00000;
-//        if (random_num == 3'b000) begin
-//            leds[0] = 1'b1;
-//            leds[4:1] = 4'b0000;
-//        end else if (random_num == 3'b001 | random_num == 3'b010) begin
-//            leds[4:0] = 5'b00000;
-//            leds[1] = 1'b1;
-//        end else if (random_num == 3'b011 | random_num == 3'b100) begin
-//            leds[4:0] = 5'b00000;
-//            leds[2] = 1'b1;
-//        end else if (random_num == 3'b101 | random_num == 3'b110) begin
-//            leds[4:0] = 5'b00000;
-//            leds[3] = 1'b1;
-//        end else if (random_num == 3'b111) begin
-//            leds[4] = 1'b1;
-//            leds[3:0] = 4'b0000;
-//        end
-//    end
-            
-            
-    
-    
-    
-    // game module
-    //      30 second counter (should be the same as 5 second) - BRIANA
-    //          input - 30 and up count instruction, output - character encoded in 4 bits for count
-    //      score tracker module - MICHELLE
-    //          input - score as a bus, output - none
-    //          7 segment display (same as before)
-    //      randomizer - TERRY
-    //          input - either random variable or self generate, output - bus containing state
-    //      mole - NORMAN
-    //          input - bus containing lights turned on, output - hit or not
-    /*
-    // Randomizer
-    LFSR4 my_randomizer(.number(random_num), .clk(clk), .reset(reset));
-    
-    // REMEMBER TO ADD THE BUTTONS, LED TO THE CONSTRAINT FILE NORMAN DONT FORGET AHH PLEASE REMEMBER
-    mole_state my_mole(.Clock_1HZ(outClk_Hz), .mole_number(random_num), .buttons(buttons), .led(led), .win_or_not(win_or_not));
 
-    // Score Tracker
-    score_cnt my_score_counter(.win_or_not(win_or_not), .reset(reset), .score(score));
-    */
 endmodule

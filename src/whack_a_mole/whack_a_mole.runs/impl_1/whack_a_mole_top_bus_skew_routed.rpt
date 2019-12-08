@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Dec  7 16:17:32 2019
+| Date         : Sat Dec  7 19:57:29 2019
 | Host         : ECE-PHO115-09 running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file whack_a_mole_top_bus_skew_routed.rpt -pb whack_a_mole_top_bus_skew_routed.pb -rpx whack_a_mole_top_bus_skew_routed.rpx
 | Design       : whack_a_mole_top
