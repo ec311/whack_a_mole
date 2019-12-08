@@ -26,7 +26,7 @@ module score_cnt(
     output reg [15:0] score_display
     );
 
-    reg [3:0] scoreBinary;
+    reg [5:0] scoreBinary;
     wire [3:0] tens;
     wire [3:0] ones;
     wire [3:0] hundreds;

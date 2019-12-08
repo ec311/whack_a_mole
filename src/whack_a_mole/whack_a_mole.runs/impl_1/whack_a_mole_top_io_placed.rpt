@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Sat Dec  7 19:56:59 2019
-| Host                      : ECE-PHO115-09 running 64-bit major release  (build 9200)
+| Date                      : Sun Dec  8 14:39:10 2019
+| Host                      : ECE-PHO115-12 running 64-bit major release  (build 9200)
 | Command                   : report_io -file whack_a_mole_top_io_placed.rpt
 | Design                    : whack_a_mole_top
 | Device                    : xc7a100t

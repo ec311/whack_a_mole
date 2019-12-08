@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Dec  7 19:57:28 2019
-| Host         : ECE-PHO115-09 running 64-bit major release  (build 9200)
+| Date         : Sun Dec  8 14:39:41 2019
+| Host         : ECE-PHO115-12 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file whack_a_mole_top_methodology_drc_routed.rpt -pb whack_a_mole_top_methodology_drc_routed.pb -rpx whack_a_mole_top_methodology_drc_routed.rpx
 | Design       : whack_a_mole_top
 | Device       : xc7a100tcsg324-1
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 129
+             Violations found: 133
 +-----------+------------------+-----------------------------+------------+
 | Rule      | Severity         | Description                 | Violations |
 +-----------+------------------+-----------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell | 118        |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell | 122        |
 | TIMING-20 | Warning          | Non-clocked latch           | 11         |
 +-----------+------------------+-----------------------------+------------+
 
@@ -600,25 +600,45 @@ Related violations: <none>
 
 TIMING-17#114 Critical Warning
 Non-clocked sequential cell  
-The clock pin score_counter/score_display_reg[10]/C is not reached by a timing clock
+The clock pin score_counter/scoreBinary_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#115 Critical Warning
 Non-clocked sequential cell  
-The clock pin score_counter/score_display_reg[11]/C is not reached by a timing clock
+The clock pin score_counter/scoreBinary_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#116 Critical Warning
 Non-clocked sequential cell  
-The clock pin score_counter/score_display_reg[12]/C is not reached by a timing clock
+The clock pin score_counter/score_display_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#117 Critical Warning
 Non-clocked sequential cell  
-The clock pin score_counter/score_display_reg[8]/C is not reached by a timing clock
+The clock pin score_counter/score_display_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#118 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_counter/score_display_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#119 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_counter/score_display_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#120 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_counter/score_display_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#121 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_counter/score_display_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#122 Critical Warning
 Non-clocked sequential cell  
 The clock pin score_counter/score_display_reg[9]/C is not reached by a timing clock
 Related violations: <none>
