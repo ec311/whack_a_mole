@@ -2,8 +2,8 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Dec  9 22:41:53 2019
-# Process ID: 8976
+# Start of session at: Mon Dec  9 22:37:20 2019
+# Process ID: 8216
 # Current directory: D:/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source D:/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim/xsim.dir/lfsr_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/whack_a_mole/src/whack_a_mole/whack_a_mole.sim/sim_1/behav/xsim/webtalk.log

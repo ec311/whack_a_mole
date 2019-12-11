@@ -23,6 +23,9 @@
 module whack_a_mole_top(
         input clk,
         input reset,
+        input easy,
+        input med,
+        input hard,
         input [7:0] switches,
         output [7:0] ANLine,
         output [6:0] displaySegments,
@@ -32,6 +35,7 @@ module whack_a_mole_top(
     wire outClk_kHz;
     wire outClk_Hz;
     wire outClk_TenthHz;
+    wire outClk_var;
     reg [3:0] state;
     reg [3:0] nextState;
     wire [3:0] character;
@@ -48,12 +52,17 @@ module whack_a_mole_top(
     //wire [7:0] switches;
     wire done_0;
     wire done_1;
+    
+    wire [1:0] level_select;
 //    wire win;
     
     // top level clock dividers, pass to each module that uses it
     clock_divider100MHzTo1kHz c_dMTokHz(.clk(clk), .reset(reset), .outClk(outClk_kHz));
     clock_divider100MHzTo1Hz c_dMToHz(.clk(clk), .reset(reset), .outClk(outClk_Hz));
     clock_divider100MHzToTenthHz c_dMToTenthHz(.clk(clk), .reset(reset), .outClk(outClk_TenthHz));
+    
+    
+    
     
     // Input - top level clock, 1Hz clock, enable signal, reset
     // Output - a 32 bit bus containing everything that will be displayed in binary (display)
@@ -78,7 +87,11 @@ module whack_a_mole_top(
     //score_cnt score_counter(.win_or_not(1'b0), .reset(reset), .score_display(score_display));
     
     // 
-    LFSR4 my_randomizer(.clk(outClk_Hz), .reset(reset), .number(random_num));
+    
+    level_select lev_s(.easy(easy), .med(med), hard(hard), .level(level_select));
+    clock_divider100MHzToVarious c_dMtoV(.clk(clk), .reset(reset), .level(level_select), .outClk(outClk_var));
+    
+    LFSR4 my_randomizer(.clk(outClk_var), .reset(reset), .number(random_num));
     
     led_select l1(.enable(enable[1]), .reset(reset), .random_num(random_num), .leds(leds), .mole_num(mole_num));
 
@@ -110,6 +123,7 @@ module whack_a_mole_top(
             end
         endcase
     end
+    
     
 
 endmodule

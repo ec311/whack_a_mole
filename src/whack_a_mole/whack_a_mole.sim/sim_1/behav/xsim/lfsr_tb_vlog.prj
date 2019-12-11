@@ -1,7 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../whack_a_mole.srcs/sources_1/new/LFSR.v" \
-"../../../../whack_a_mole.srcs/sources_1/new/LFSR4.v" \
 "../../../../whack_a_mole.srcs/sources_1/new/clock_divider.v" \
 "../../../../whack_a_mole.srcs/sources_1/new/count2.v" \
 "../../../../whack_a_mole.srcs/sources_1/new/display_control.v" \
@@ -14,6 +13,8 @@ verilog xil_defaultlib  \
 "../../../../whack_a_mole.srcs/sources_1/new/startup1.v" \
 "../../../../whack_a_mole.srcs/sources_1/new/binary_to_BCD.v" \
 "../../../../whack_a_mole.srcs/sources_1/new/led_select.v" \
+"../../../../whack_a_mole.srcs/sources_1/new/LFSR4_copy.v" \
+"../../../../whack_a_mole.srcs/sources_1/new/level_select.v" \
 "../../../../whack_a_mole.srcs/sim_1/new/lfsr_tb.v" \
 "../../../../whack_a_mole.srcs/sim_1/new/mole_state_testbench.v" \
 "../../../../whack_a_mole.srcs/sim_1/new/whack_a_mole_top_testbench.v" \

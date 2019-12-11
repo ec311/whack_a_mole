@@ -17,32 +17,35 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.cache/wt [current_project]
-set_property parent.project_path X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.xpr [current_project]
+set_property webtalk.parent_dir D:/whack_a_mole/src/whack_a_mole/whack_a_mole.cache/wt [current_project]
+set_property parent.project_path D:/whack_a_mole/src/whack_a_mole/whack_a_mole.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo x:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.cache/ip [current_project]
+set_property ip_output_repo d:/whack_a_mole/src/whack_a_mole/whack_a_mole.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/count2.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/display_control.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/down_counter.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/mole_state.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/score_cnt.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/seven_segment_decoder.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup1.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/binary_to_BCD.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/led_select.v
-  X:/Desktop/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR4_copy.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/clock_divider.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/count2.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/display_control.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/down_counter.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/mole_state.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/score_cnt.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/seven_segment_decoder.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/whack_a_mole_top.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/startup1.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/binary_to_BCD.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/led_select.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/LFSR4_copy.v
+  D:/whack_a_mole/src/whack_a_mole/whack_a_mole.srcs/sources_1/new/level_select.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -52,8 +55,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc X:/Desktop/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc
-set_property used_in_implementation false [get_files X:/Desktop/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]
+read_xdc D:/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc
+set_property used_in_implementation false [get_files D:/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

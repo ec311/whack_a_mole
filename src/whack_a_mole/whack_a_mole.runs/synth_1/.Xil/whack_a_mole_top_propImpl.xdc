@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:X:/Desktop/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc rfile:../../../Nexys4DDR_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/whack_a_mole/src/whack_a_mole/Nexys4DDR_Master.xdc rfile:../../../Nexys4DDR_Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports clk]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
@@ -17,6 +17,12 @@ set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports switches[6]]; #IO_L17N_T2_A13_D29_14 Sch=sw[6]
 set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R13   IOSTANDARD LVCMOS33 } [get_ports switches[7]]; #IO_L5N_T0_D07_14 Sch=sw[7]
+set_property src_info {type:XDC file:1 line:25 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN H6    IOSTANDARD LVCMOS33 } [get_ports { hard }]; #IO_L24P_T3_35 Sch=sw[12]
+set_property src_info {type:XDC file:1 line:26 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { med }]; #IO_L20P_T3_A08_D24_14 Sch=sw[13]
+set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN U11   IOSTANDARD LVCMOS33 } [get_ports { easy }]; #IO_L19N_T3_A09_D25_VREF_14 Sch=sw[14]
 set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L21P_T3_DQS_14 Sch=sw[15]
 set_property src_info {type:XDC file:1 line:33 export:INPUT save:INPUT read:READ} [current_design]
