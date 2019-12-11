@@ -21,6 +21,7 @@
 
 // This is a standard binary to BCD converter, 
 // created following this stack overflow post https://stackoverflow.com/questions/36831564/how-to-convert-two-digit-bcd-into-binary.
+// The hundreds output is not used.
 module binary_to_BCD(
     input [7:0] binary,
     output reg [3:0] hundreds,
